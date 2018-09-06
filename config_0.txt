@@ -1,0 +1,60 @@
+screen-idx = 1
+
+role = server # server | client
+server-ip = 192.168.66.1
+server-port = 54321
+quit-on-disconnection = true  # true | false
+#send-rate = 120
+
+tracking-start-measurement = true
+tracking-enabled = true
+tracking-host = 192.168.77.101
+tracking-port = 5000
+glasses-correction = 0;-0.06;0
+glasses-correction = 0;0;0
+
+stereoscopy-mode = stereo  # stereo | split | none
+eye-separation = 0.05  # [m]
+swap-eyes = false
+fullscreen = true  # true | false
+cursor-visible = true
+target-frame-rate = -1
+vSync-count = 0
+
+screens-origin-offset = 0;1.65;0
+tracking-origin-offset = 0;1.65;0
+
+wall-warning-scale = 0.1
+
+###################################################################
+
+node 1
+
+role = server  # server | client
+
+node 2
+
+screen-idx = 1
+
+node 3
+
+screen-idx = 2
+
+node 4
+
+screen-idx = 3
+
+###################################################################
+
+# screens and walls
+# screen/wall name centre normal up width height resX resY
+
+s FRONT 0;0;0.6 0;0;-1 0;1;0 0.6 0.34 2560 1440
+s LEFT -0.31;0;0.3 1;0;0 0;1;0 0.6 0.34 2560 1440
+s RIGHT 0.31;0;0.3 -1;0;0 0;1;0 0.6 0.34 2560 1440
+s FLOOR 0;-0.17;0.42 0;1;0 0;0;1 0.6 0.34 2560 1440
+
+w FRONT 0;0;0.6 0;0;-1 0;1;0 0.6 0.34 2560 1440
+w LEFT -0.31;0;0.3 1;0;0 0;1;0 0.6 0.34 2560 1440
+w RIGHT 0.31;0;0.3 -1;0;0 0;1;0 0.6 0.34 2560 1440
+w FLOOR 0;-0.17;0.42 0;1;0 0;0;1 0.6 0.34 2560 1440
